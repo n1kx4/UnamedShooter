@@ -6,8 +6,7 @@ local Main = Window:NewTab("Main")
 local MainSection = Main:NewSection("Main")
 
 MainSection:NewButton("Aimbot", "Aimbot.", function()
-    --The key bind to activate the aimlock is right click
---FE Simple AimLock Script | Released Nov 2021 | Working.
+  -- Aimlock
 local Area = game:GetService("Workspace")
 local RunService = game:GetService("RunService")
 local UIS = game:GetService("UserInputService")
@@ -22,7 +21,7 @@ local MyTeamColor = LocalPlayer.TeamColor
 local HoldingM2 = false
 local Active = false
 local Lock = false
-local Epitaph = .187 ---Note: The Bigger The Number, The More Prediction.
+local Epitaph = 0.0001
 local HeadOffset = Vector3.new(0, .1, 0)
 
 _G.TeamCheck = false
@@ -94,7 +93,7 @@ UIS.InputEnded:Connect(function(Input)
 		UnLockCursor()
 	end
 end)
-game.StarterGui:SetCore("SendNotification", {Title = "Working.", Text = "discord.gg/cV3WC2w4Sd", Duration = 10,})
+game.StarterGui:SetCore("SendNotification", {Title = "Eternal Lock V3", Text = "Loaded", Duration = 5,})
 end)
 
 MainSection:NewButton("ESP", "ESP.", function()
